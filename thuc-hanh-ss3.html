@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function luyenTapToanTu1() {
+            let a = prompt("a la: ");
+            console.log(a);
+            let b = prompt("b la: ");
+            console.log(b);
+            let result = ((a + b) < 4)?
+                "Over" :
+                "Below";  //Why??
+            console.log(result);
+        }
+
+        function luyenTapToanTu2() {
+            let login = prompt("please login: ")
+            let returnMessage = (login == 'Employee')?
+                'Hello' :
+                    (login == 'Director')?
+                        'Greetings' :
+                            (login === '')?
+                                'No login' :
+                                    '';
+            console.log(returnMessage);
+        }
+
+        function luyenTapIfElse() {
+            let check = prompt("What is the \"official\" name of JavaScript?");
+            let result = (check === "ECMAScript")?
+                "Right!":
+                "You don't know? ECMAScript!";
+            console.log(result);
+        }
+
+        function luyenWitchCase1() {
+            let browser = prompt("What is your browser?")
+            switch (browser) {
+                case 'Edge':
+                    alert("You've got the Edge!");
+                    break;
+                case 'Chrome':
+                case 'Firefox':
+                case 'Safari':
+                case 'Opera':
+                    alert('Okay we support these browsers too');
+                    break;
+                default:
+                    alert('We hope that this page looks ok!');
+            }
+        }
+
+        function luyenWitchCase2() {
+            let a = prompt('a is', '');
+            switch (a) {
+                case 0:
+                    alert(0);
+                    break;
+                case 1:
+                    alert(1);
+                    break;
+                case 2:
+                case 3:
+                    alert('2,3');
+                    break;
+                default:
+                    console.log("not 1,2,3");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Luyen tap toan tu 1</h1>
+        <button type="button" id="luyenTapToanTu1" onclick="luyenTapToanTu1()" value="luyenTapToanTu1">luyenTapToanTu1</button>
+    <h1>Luyen tap toan tu 2</h1>
+        <button type="button" id="luyenTapToanTu2" onclick="luyenTapToanTu2()" value="luyenTapToanTu2">luyenTapToanTu2</button>
+    <h1>Luyen tap cau truc if/else</h1>
+        <button type="button" id="luyenTapIfElse" onclick="luyenTapIfElse()" value="luyenTapIfElse">luyenTapIfElse</button>
+    <h1>Luyen tap cau truc Switch-Case</h1>
+        <button type="button" id="luyenWitchCase1" onclick="luyenWitchCase1()" value="luyenWitchCase1">luyenWitchCase1</button>
+    <h1>Luyen tap cau truc Switch-Case 2</h1>
+        <button type="button" id="luyenWitchCase2" onclick="luyenWitchCase2()" value="luyenWitchCase2">luyenWitchCase2</button>
+</body>
+</html>
